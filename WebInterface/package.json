@@ -1,0 +1,55 @@
+{
+  "name": "ts3abweb",
+  "version": "2.0.0-alpha",
+  "description": "Provides a ui to control the TS3AudioBot",
+  "scripts": {
+    "build": "webpack --config webpack.production.config.js",
+    "start": "webpack-dev-server --config webpack.development.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Splamy/TS3AudioBot"
+  },
+  "keywords": [
+    "ts3",
+    "ts3ab",
+    "interface",
+    "ui",
+    "audio",
+    "bot"
+  ],
+  "author": "Splamy",
+  "license": "OSL-3.0",
+  "dependencies": {
+    "@mdi/font": "^4.5.95",
+    "buefy": "^0.8.6",
+    "lodash-es": "^4.17.15",
+    "swagger-ui-dist": "^3.24.2",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.3"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.3",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "material-design-icons-iconfont": "^5.0.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "style-loader": "^1.0.0",
+    "svg-inline-loader": "^0.8.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "uglify-es": "^3.3.9",
+    "vue-loader": "^15.7.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.41.2",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
