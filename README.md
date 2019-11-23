@@ -1,4 +1,4 @@
-# TS3AudioBot
+# BetterAudioBot
 
 This is a open-source TeamSpeak3 bot, playing music and much more.  
 

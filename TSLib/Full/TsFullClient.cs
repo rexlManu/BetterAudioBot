@@ -41,7 +41,7 @@ namespace TSLib.Full
 		/// <summary>The disonnect message when leaving.</summary>
 		public string QuitMessage { get; set; } = "Disconnected";
 		/// <summary>The <see cref="Full.VersionSign"/> used to connect.</summary>
-		public double CustomPing { get; set; } = -1d;
+		public int CustomPing { get; set; } = 2;
 
 		public VersionSign VersionSign { get; private set; }
 		/// <summary>The <see cref="Full.IdentityData"/> used to connect.</summary>

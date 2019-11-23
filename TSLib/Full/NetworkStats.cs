@@ -111,7 +111,7 @@ namespace TSLib.Full
 				queue.Dequeue();
 		}
 
-		public TsCommand GenerateStatusAnswer(double customPing)
+		public TsCommand GenerateStatusAnswer(int customPing)
 		{
 			long[] lastSecondIn;
 			long[] lastSecondOut;
@@ -137,7 +137,7 @@ namespace TSLib.Full
 			}
 
 			return new TsCommand("setconnectioninfo") {
-				{ "connection_ping", customPing == -1 ? Math.Round(lastPing, 0): customPing },
+				{ "connection_ping", Math.Round(lastPing, customPing) },
 				{ "connection_ping_deviation", deviationPing },
 				{ "connection_packets_sent_speech", outPackets[(int)PacketKind.Speech] },
 				{ "connection_packets_sent_keepalive", outPackets[(int)PacketKind.Keepalive] },

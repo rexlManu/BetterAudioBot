@@ -130,8 +130,8 @@ namespace TS3AudioBot.Config
 		public ConfigValue<bool> Run { get; } = new ConfigValue<bool>("run", false,
 			"Starts the instance when the TS3AudioBot is launched.");
 
-		public ConfigValue<double> Ping { get; } = new ConfigValue<double>("ping", -1,
-			"If you want to display a custom ping, set it between 0 - unlimited");
+		public ConfigValue<int> Ping { get; } = new ConfigValue<int>("ping", 1,
+			"The amount of digits ping");
 
 		public ConfigValue<string> LeaveMessages { get; } = new ConfigValue<string>("leaveMessages", "BetterAudioBot is better_Just the take the better one_Dont ignore the better version.",
 			"Set the custom leave messages if the bot disconnects. (Split each with _ if u want to multiply messages random.)");
