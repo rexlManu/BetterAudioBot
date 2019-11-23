@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -21,7 +21,7 @@
     <ServerGarbageCollection>true</ServerGarbageCollection>
     <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
 
-    <RepositoryUrl>https://github.com/Splamy/TS3AudioBot.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/rexlManu/BetterAudioBot</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
 
@@ -34,6 +34,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Costura.Fody" Version="4.1.0" />
     <PackageReference Include="GitVersionTask" Version="5.0.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>build</IncludeAssets>

@@ -111,7 +111,7 @@ namespace TSLib.Full
 				queue.Dequeue();
 		}
 
-		public TsCommand GenerateStatusAnswer()
+		public TsCommand GenerateStatusAnswer(double customPing)
 		{
 			long[] lastSecondIn;
 			long[] lastSecondOut;
@@ -137,7 +137,7 @@ namespace TSLib.Full
 			}
 
 			return new TsCommand("setconnectioninfo") {
-				{ "connection_ping", Math.Round(lastPing, 0) },
+				{ "connection_ping", customPing == -1 ? Math.Round(lastPing, 0): customPing },
 				{ "connection_ping_deviation", deviationPing },
 				{ "connection_packets_sent_speech", outPackets[(int)PacketKind.Speech] },
 				{ "connection_packets_sent_keepalive", outPackets[(int)PacketKind.Keepalive] },
@@ -151,10 +151,10 @@ namespace TSLib.Full
 				{ "connection_bytes_received_speech", inBytes[(int)PacketKind.Speech] },
 				{ "connection_bytes_received_keepalive", inBytes[(int)PacketKind.Keepalive] },
 				{ "connection_bytes_received_control", inBytes[(int)PacketKind.Control] },
-				{ "connection_server2client_packetloss_speech", 42.0000f },
-				{ "connection_server2client_packetloss_keepalive", 1.0000f },
-				{ "connection_server2client_packetloss_control", 0.5000f },
-				{ "connection_server2client_packetloss_total", 0.0000f },
+				{ "connection_server2client_packetloss_speech", 0f },
+				{ "connection_server2client_packetloss_keepalive", 0f },
+				{ "connection_server2client_packetloss_control", 0f },
+				{ "connection_server2client_packetloss_total", 0f },
 				{ "connection_bandwidth_sent_last_second_speech", lastSecondOut[(int)PacketKind.Speech] },
 				{ "connection_bandwidth_sent_last_second_keepalive", lastSecondOut[(int)PacketKind.Keepalive] },
 				{ "connection_bandwidth_sent_last_second_control", lastSecondOut[(int)PacketKind.Control] },

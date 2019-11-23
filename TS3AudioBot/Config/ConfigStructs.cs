@@ -130,6 +130,12 @@ namespace TS3AudioBot.Config
 		public ConfigValue<bool> Run { get; } = new ConfigValue<bool>("run", false,
 			"Starts the instance when the TS3AudioBot is launched.");
 
+		public ConfigValue<double> Ping { get; } = new ConfigValue<double>("ping", -1,
+			"If you want to display a custom ping, set it between 0 - unlimited");
+
+		public ConfigValue<string> LeaveMessages { get; } = new ConfigValue<string>("leaveMessages", "BetterAudioBot is better_Just the take the better one_Dont ignore the better version.",
+			"Set the custom leave messages if the bot disconnects. (Split each with _ if u want to multiply messages random.)");
+
 		public ConfCommands Commands { get; } = Create<ConfCommands>("commands");
 		public ConfConnect Connect { get; } = Create<ConfConnect>("connect");
 		public ConfReconnect Reconnect { get; } = Create<ConfReconnect>("reconnect");
@@ -173,10 +179,9 @@ namespace TS3AudioBot.Config
 		public ConfigValue<string> Channel { get; } = new ConfigValue<string>("channel", "",
 			"Default channel when connecting. Use a channel path or \"/<id>\".\n" +
 			"Examples: \"Home/Lobby\", \"/5\", \"Home/Afk \\\\/ Not Here\".");
-		public ConfigValue<string> Badges { get; } = new ConfigValue<string>("badges", "",
-			"The client badges. You can set a comma seperated string with max three GUID's. Here is a list: http://yat.qa/ressourcen/abzeichen-badges/");
+		public ConfigValue<string> Badges { get; } = new ConfigValue<string>("badges", "","WIP");
 		public ConfigValue<string> Name { get; } = new ConfigValue<string>("name",
-			"TS3AudioBot", "Client nickname when connecting.");
+			"BetterAudioBot", "Client nickname when connecting.");
 
 		public ConfPassword ServerPassword { get; } = Create<ConfPassword>("server_password",
 			"The server password. Leave empty for none.");

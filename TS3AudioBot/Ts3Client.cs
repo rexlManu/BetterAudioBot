@@ -33,18 +33,6 @@ namespace TS3AudioBot
 		public event EventHandler<TextMessage> OnMessageReceived;
 		public event EventHandler<AloneChanged> OnAloneChanged;
 		public event EventHandler OnWhisperNoTarget;
-
-		private static readonly string[] QuitMessages = {
-			"I'm outta here", "You're boring", "Have a nice day", "Bye", "Good night",
-			"Nothing to do here", "Taking a break", "Lorem ipsum dolor sit amet…",
-			"Nothing can hold me back", "It's getting quiet", "Drop the bazzzzzz",
-			"Never gonna give you up", "Never gonna let you down", "Keep rockin' it",
-			"?", "c(ꙩ_Ꙩ)ꜿ", "I'll be back", "Your advertisement could be here",
-			"connection lost", "disconnected", "Requested by API.",
-			"Robert'); DROP TABLE students;--", "It works!! No, wait...",
-			"Notice me, senpai", ":wq", "Soon™"
-		};
-
 		private bool closed = false;
 		private TickWorker reconnectTick = null;
 		private int reconnectCounter;
@@ -123,7 +111,8 @@ namespace TS3AudioBot
 
 			reconnectCounter = 0;
 			lastReconnect = null;
-			ts3FullClient.QuitMessage = Tools.PickRandom(QuitMessages);
+			ts3FullClient.QuitMessage = Tools.PickRandom(config.LeaveMessages.Value.Split('_'));
+			ts3FullClient.CustomPing = config.Ping;
 			ClearAllCaches();
 			return ConnectClient();
 		}
