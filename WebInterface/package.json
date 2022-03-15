@@ -23,7 +23,7 @@
   "dependencies": {
     "@mdi/font": "^4.5.95",
     "buefy": "^0.8.6",
-    "lodash-es": "^4.17.15",
+    "lodash-es": "^4.17.21",
     "swagger-ui-dist": "^3.24.2",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3"
